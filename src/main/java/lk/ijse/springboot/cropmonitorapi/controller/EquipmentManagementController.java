@@ -31,15 +31,7 @@ public class EquipmentManagementController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } else {
             try{
-                equipmentService.saveEquipment(equipment);
-                logger.info("Equipment with Equipment Code: {} saved successfully", equipment.getEquipmentId());
-                return new ResponseEntity<>(HttpStatus.CREATED);
-            } catch (DataPersistFailedException e){
-                logger.error("Failed to save equipment: {}", equipment, e);
-                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            } catch (Exception e) {
-                logger.error("Internal server error while saving equipment: {}", equipment, e);
-                return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+
             }
         }
     }
