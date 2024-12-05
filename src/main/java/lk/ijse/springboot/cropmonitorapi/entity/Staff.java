@@ -49,4 +49,5 @@ public class Staff implements SuperEntity {
     @JsonIgnore
     @OneToMany(mappedBy = "staff")
     private List<Vehicle> vehicles;
+
 }
